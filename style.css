@@ -1,0 +1,249 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+
+
+
+
+:root{
+
+   /* --  Colors  -- */
+
+   --main-color: #1E3769;
+   --secondary-color: #FFCC72;
+
+   --dark: #132044;
+   --light-color1: #F2F6F9;
+   --light-color2: #C0CFE6;
+
+   --green: #28a745;
+   --red: #dc3545;
+   --light-blue:#17a2b8;
+   /* --  Font  -- */
+
+   --f: 'Montserrat', sans-serif;
+
+}
+
+
+*{
+   padding: 0;
+   margin: 0;
+   font-family: var(--f);
+   box-sizing: border-box;
+}
+
+a,button{
+   all: unset;
+   cursor: pointer;
+
+}
+
+
+body{
+   background: var(--main-color);
+}
+
+
+/* ---  First Animation  --- */
+
+#present{
+   height: 360dvh;
+   position: relative;
+}
+.presentItemContainer{
+   position: sticky;
+   top: 0;
+   left: 0;
+   height: 100dvh;
+   width: 100%;
+}
+
+#present .presentItemContainer div{
+   position: absolute;
+   height: 100dvh;
+   width: 100%;
+   top: 0;
+   left: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   opacity: 0;
+   transition: 0.3s ease-in-out;
+}
+
+#present .presentItemContainer div img{
+   max-width: 90dvw;
+   max-height: 70%;
+}
+
+#present .presentItemContainer div h1{
+   font-size: 4rem;
+   color: var(--light-color1);
+}
+
+
+
+/* ---  SECOND PART  --- */
+#secondP{
+   position: relative;
+}
+
+#secondP section{
+   padding: 5rem 10vw;
+   margin-bottom: 5rem;
+}
+
+#secondP section h1.sectionTitle{
+   color: var(--light-color1);
+   font-size: 4rem;
+   position: relative;
+}
+
+#secondP section h1.sectionTitle::after{
+   position: absolute;
+   content: '';
+   width: 200px;
+   height: 3px;
+   border-radius: 100vmax;
+   background: var(--secondary-color);
+   bottom: 0;
+   left: 0;
+}
+
+/* navbar */
+
+.header{
+   display: flex;
+   align-items: center;
+   padding: 2rem 10vw;
+   justify-content: space-between;
+   position: sticky;
+   top: 0;
+   background: var(--main-color);
+   z-index: 10;
+}
+
+.header .left img{
+   height: 100px;
+}
+
+.header nav.right{
+   display: flex;
+   gap: 2rem;
+   color: var(--light-color1);
+   font-size: 1.4rem;
+}
+
+.header nav.right a{
+   transition: 0.3s ease-in;
+   position: relative;
+   padding: 0.5rem;
+}
+
+.header nav.right a.active ,.header nav.right a:hover{
+   color: var(--secondary-color);
+   /* font-weight: 500; */
+}
+
+.header nav.right a::after{
+   content: '';
+   width: 0;
+   height: 3px;
+   background: var(--secondary-color);
+   border-radius: 100vmax;
+   position: absolute;
+   bottom: 0;
+   left: 50%;
+   transform: translateX(-50%);
+   transition: 0.3s ease;
+}
+
+
+.header nav.right a.active::after,
+.header nav.right a:hover::after{
+   width: 100%;
+}
+
+
+/* the event */
+#event{
+   position: relative;
+}
+
+#event p{
+   color: var(--light-color1);
+   font-size: 3rem;
+   padding: 5rem 3rem;
+   line-height: 4rem;
+   letter-spacing: 1px;
+}
+
+#event p span{
+   color: var(--secondary-color);
+   font-weight: 500;
+}
+
+#event p i{
+   color: var(--secondary-color);
+}
+
+#event a.seeMore{
+   color: var(--primary-color);
+   background: var(--secondary-color);
+   border-radius: 1rem;
+   border: 2px solid var(--secondary-color);
+   padding: 1rem 4rem;
+   font-size: 1.5rem;
+   transition: 0.3s;
+   margin: 0 auto;
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+}
+
+#event a.seeMore:hover{
+   background: none;
+   color: var(--secondary-color);
+
+}
+
+
+/* countdown */
+
+
+#countdown .container{
+   width: 100%;
+   display: flex;
+   justify-content: center;
+}
+
+#countdown .container .phases{
+   display: flex;
+   border: var(--light-color2) 1px solid;
+   padding: 5px;
+   border-radius: 100vmax;
+   gap: 1rem;
+}
+
+#countdown .container .phases .phase{
+   font-size: 1.3rem;
+   padding: 0.5rem;
+   color: var(--light-color1);
+
+}
+
+#countdown .container .phases .phase.passed{
+   color: var(--light-blue);
+
+}
+
+
+#countdown .container .phases .phase.current{
+   color: var(--green);
+   background: var(--dark);
+   font-weight: 500;
+   border-radius: 100vmax;
+
+}
