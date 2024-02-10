@@ -10,6 +10,8 @@
 
 
    <script src="./app.js" defer></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.10.1/lottie.min.js" integrity="sha512-H6aKTjvYAazW0iNuGj1f2dZvSWlt1HGZGEDsXRPETo2IB4H6v36Vl2qiZNlCRxOp0kT7iBf+7USNPavNscZGAw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 </head>
 <body>
    
@@ -20,6 +22,7 @@
          </div>
          <div class="presents"> <h1>PRESENTS</h1> </div>
          <div class="expoventure"> <img src="./assets/expoventure.png" alt=""></div>
+         <div class="scrolldownanimation"></div>
       </div>
    </section>
    <section id="secondP">
@@ -28,10 +31,10 @@
             <img src="./assets/navPic.png" alt="">
          </div>
          <nav class="right">
-            <a href="" class="navlink">Event</a>
-            <a href="" class="navlink">Countdown</a>
-            <a href="" class="navlink">Register</a>
-            <a href="" class="navlink">Q&A</a>
+            <a href="#event" class="navlink">Event</a>
+            <a href="#countdown" class="navlink">Countdown</a>
+            <a href="#register" class="navlink">Register</a>
+            <a href="#faq" class="navlink">FAQ</a>
          </nav>
       </header>
 
@@ -52,11 +55,134 @@
 
          <div class="container">
             <div class="phases">
-               <p class="phase passed"><i class="fa-solid fa-circle-check"></i> Announcement</p>
-               <p class="phase current"><i class="fa-solid fa-circle"></i> Registration</p>
-               <p class="phase coming"><i class="fa-solid fa-clock"></i> EV is Here!</p>
+               <p class="phase "><i class="fa-solid fa-circle-check"></i> Announcement</p>
+               <p class="phase "><i class="fa-solid fa-circle"></i> Registration</p>
+               <p class="phase "><i class="fa-solid fa-clock"></i> EV is Here!</p>
             </div>
 
+            <h2 class="countdownTitle">
+               
+            </h2>
+
+            <div class="countdownContainer">
+               <div class="days">00</div>
+               <p>:</p>
+               <div class="hours">00</div>
+               <p>:</p>
+               <div class="minutes">00</div>
+               <p>:</p>
+               <div class="seconds">00</div>
+            </div>
+
+            <a href="#register" class="actionBtn">Reserve now!</a>
+
+         </div>
+      </section>
+
+      <section id="register">
+         
+
+         <div class="reserve">
+            <h1 class="sectionTitle">
+               Reserve:
+            </h1>
+
+            <p>Please Enter your email so we can notify you when Registrations start</p>
+
+            <form action="" class="input">
+               <input type="email" name="email" id="reserveEmailInp" placeholder="name@email.com" required>
+               <button type="submit" class="actionBtn">Reserve</button>
+            </form>
+
+
+         </div>
+
+
+         <div class="register">
+            <h1 class="sectionTitle">
+               Register:
+            </h1>
+
+            <p>If you are interested in <span>Expoventure</span> and you have an engineering project that you believe can get you financial aid. Please fulfill this form below.</p>
+
+            <a href="#" class="actionBtn">Register</a>
+
+
+         </div>
+
+         <div class="spectate">
+            <h1 class="sectionTitle">
+               Buy ticket:
+            </h1>
+
+            <p>Registrations ended, but you can still attend <span>expoventure</span> as a spectator!. fill out this form to know more.</p>
+
+            <a href="#" class="actionBtn">Buy a ticket</a>
+
+
+         </div>
+
+         <div class="highlights">
+            <h1 class="sectionTitle">
+               View Highlights:
+            </h1>
+
+            <p>The event has ended, watch some d-day highlights from the link below.</p>
+
+            <a href="#" class="actionBtn">Highlights</a>
+
+
+         </div>
+      </section>
+
+      <section id="faq">
+         <h1 class="sectionTitle">
+            FAQ:
+         </h1>
+         <div class="container">
+            <div class="faq q1 active">
+               <div class="question" onclick="togglefaq(this.parentElement)">
+                  <p class="">What is expoventure</p>
+                  <i class="fa-solid fa-chevron-down"></i>
+               </div>
+               <div class="answer">
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus quis unde dignissimos beatae dolorem itaque ut fugiat eius harum optio. Iure accusamus perspiciatis ab doloremque, eveniet omnis iusto eligendi laudantium.</p>
+               </div>
+            </div>
+
+
+            <div class="faq q1 ">
+               <div class="question" onclick="togglefaq(this.parentElement)">
+                  <p class="">What is expoventure</p>
+                  <i class="fa-solid fa-chevron-down"></i>
+               </div>
+               <div class="answer">
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus quis unde dignissimos beatae dolorem itaque ut fugiat eius harum optio. Iure accusamus perspiciatis ab doloremque, eveniet omnis iusto eligendi laudantium.</p>
+               </div>
+            </div>
+
+
+
+            <div class="faq q1 ">
+               <div class="question" onclick="togglefaq(this.parentElement)">
+                  <p class="">What is expoventure</p>
+                  <i class="fa-solid fa-chevron-down"></i>
+               </div>
+               <div class="answer">
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus quis unde dignissimos beatae dolorem itaque ut fugiat eius harum optio. Iure accusamus perspiciatis ab doloremque, eveniet omnis iusto eligendi laudantium.</p>
+               </div>
+            </div>
+
+
+            <div class="faq q1 ">
+               <div class="question" onclick="togglefaq(this.parentElement)">
+                  <p class="">What is expoventure</p>
+                  <i class="fa-solid fa-chevron-down"></i>
+               </div>
+               <div class="answer">
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus quis unde dignissimos beatae dolorem itaque ut fugiat eius harum optio. Iure accusamus perspiciatis ab doloremque, eveniet omnis iusto eligendi laudantium.</p>
+               </div>
+            </div>
          </div>
       </section>
 
