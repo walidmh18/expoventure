@@ -133,6 +133,22 @@ body{
 #present .presentItemContainer .socials a:hover{
    color: var(--light-color2);
 }
+
+#present .expoventure {
+   position: relative;
+}
+
+
+#present .expoventure img{
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%,-50%);
+}
+
+#present .expoventure img:nth-child(2){
+   opacity: 0.35;
+}
 /* ---  SECOND PART  --- */
 .sectiondevider{
    background: var(--main-color2);
@@ -192,10 +208,20 @@ body{
    transition: 0.3s ease-out;
 }
 
+.header .left{
+   position: relative;
+}
+
 .header .left img{
    height: 100px;
 }
 
+
+.header .left img:nth-child(2){
+   position: absolute;
+   opacity: 0.35;
+   left: 0;
+}
  /* nav.showOnMobile{
    display: none;
 }
@@ -357,23 +383,23 @@ body{
 }
 
 #countdown .container  .countdownContainer div.days::after{
-   content: 'days';
+   content: 'D';
 
 }
 
 
 #countdown .container  .countdownContainer div.hours::after{
-   content: 'hours';
+   content: 'H';
 
 }
 
 #countdown .container  .countdownContainer div.minutes::after{
-   content: 'minutes';
+   content: 'M';
 
 }
 
 #countdown .container  .countdownContainer div.seconds::after{
-   content: 'seconds';
+   content: 'S';
 
 }
 
@@ -528,9 +554,18 @@ footer{
    gap: 2rem;
    padding: 1rem 10vw;
 }
+footer a{
+   position: relative;
+
+}
 footer a img{
    max-width: 30vw;
 }
+footer a img:nth-child(1){
+   position: absolute;
+   opacity: 0.35;
+}
+
 
 footer p{
    color: var(--light-color1);
@@ -720,6 +755,7 @@ footer p{
       left: 0;
       z-index: 9;
       display: none;
+      transition: 0.3s;
    }
    .overlay.active{
       display: block;

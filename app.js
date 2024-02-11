@@ -84,6 +84,7 @@ const faqSection = document.querySelector('#faq')
 const screenH = screen.height;
 
 const navbar = document.querySelector('nav.right')
+const overlay = document.querySelector('.overlay')
 
 
 addEventListener('scroll', () => {
@@ -134,7 +135,7 @@ addEventListener('scroll', () => {
       // mobile navbar 
       function navToggle() {
          navbar.classList.toggle('active')
-         
+         overlay.classList.toggle('active')
       }
 
 
@@ -290,13 +291,7 @@ if (currT <= regStartDate) {
    actionBtn.innerHTML = 'View Highlights'
 }
 
-
-
-
-
 // FAQ ---
-
-
 
 const faqs = [...document.querySelectorAll('#faq .faq')]
 
@@ -308,8 +303,6 @@ faqs.forEach(f=>{
    if (f.classList.contains('active')) {
       a.style.height =  `${t.offsetHeight}px`
    }
-
-
 
 })
 
