@@ -11,6 +11,7 @@
    /* --  Colors  -- */
 
    --main-color: #1E3769;
+   --main-color2: #233F78;
    --secondary-color: #FFCC72;
 
    --dark: #132044;
@@ -101,26 +102,74 @@ body{
    stroke: var(--light-color1) !important;
 }
 
+
+
+#present .presentItemContainer .socials{
+   display: flex;
+   flex-direction: column;
+   bottom: 100px;
+   left: 100px;
+   width: unset;
+   height: unset;
+   color: var(--light-color1);
+   opacity: 1;
+   font-size: 2rem;
+   justify-content: flex-end;
+   gap: 1.5rem;
+}
+
+
+#present .presentItemContainer .socials a{
+   transition: 0.5s ease-in;
+   opacity: 0;
+   scale: 0.8;
+}
+
+#present .presentItemContainer .socials:nth-child(n){
+   transition: n*0.1s;
+}
+
+
+#present .presentItemContainer .socials a:hover{
+   color: var(--light-color2);
+}
 /* ---  SECOND PART  --- */
+.sectiondevider{
+   background: var(--main-color2);
+}
+
+.sectiondeviderBottom div{
+   transform: translateY(20px);
+}
+
 #secondP{
    position: relative;
 }
 
 #secondP section{
    padding: 5rem 10vw;
-   margin-bottom: 5rem;
+   padding-bottom:10rem;
+}
+
+#secondP section.first{
+   background: var(--main-color);
+}
+
+#secondP section.second{
+   background: var(--main-color2);
 }
 
 #secondP section h1.sectionTitle{
    color: var(--light-color1);
    font-size: 4rem;
    position: relative;
+   display: inline-block;
 }
 
 #secondP section h1.sectionTitle::after{
    position: absolute;
    content: '';
-   width: 200px;
+   width: 70%;
    height: 3px;
    border-radius: 100vmax;
    background: var(--secondary-color);
@@ -147,25 +196,35 @@ body{
    height: 100px;
 }
 
-.header nav.right{
+ /* nav.showOnMobile{
+   display: none;
+}
+ nav.hideOnMobile{
+   display: flex;
+} */
+.showOnMobile{
+   display: none;
+}
+
+ nav.right{
    display: flex;
    gap: 2rem;
    color: var(--light-color1);
    font-size: 1.4rem;
 }
 
-.header nav.right a{
+ nav.right a{
    transition: 0.3s ease-in;
    position: relative;
    padding: 0.5rem;
 }
 
-.header nav.right a.active ,.header nav.right a:hover{
+ nav.right a.active ,.header nav.right a:hover{
    color: var(--secondary-color);
    /* font-weight: 500; */
 }
 
-.header nav.right a::after{
+ nav.right a::after{
    content: '';
    width: 0;
    height: 3px;
@@ -179,8 +238,8 @@ body{
 }
 
 
-.header nav.right a.active::after,
-.header nav.right a:hover::after{
+ nav.right a.active::after,
+ nav.right a:hover::after{
    width: 100%;
 }
 
@@ -246,7 +305,7 @@ body{
    padding: 5px;
    border-radius: 100vmax;
    gap: 1rem;
-   margin: 5rem;
+   margin: 5rem auto;
 }
 
 #countdown .container .phases .phase{
@@ -278,7 +337,7 @@ body{
 #countdown .container  .countdownContainer{
    display: flex;
    color: var(--light-color1);
-   font-size: 4rem;
+   font-size: 6rem;
    gap: 2rem;
    margin: 3rem 0 7rem;
 
@@ -361,7 +420,7 @@ body{
    background: var(--dark);
    padding: 2.5rem 1rem;
    border-radius: 1.5rem;
-   max-width: 70%;
+   max-width: 100%;
 }
 
 .reserve form.input input{
@@ -441,7 +500,7 @@ body{
 }
 
 #faq .container .answer{
-   background: var(--light-color2);
+   background: var(--main);
    overflow: hidden;
    transition: 0.3s;
    height: 0;
@@ -449,7 +508,7 @@ body{
 
 #faq .container .answer p{
    padding: 2rem 3rem;
-
+   color: var(--light-color1);
 }
 #faq .active .answer{
    box-sizing: content-box;
@@ -460,3 +519,431 @@ body{
 #faq .active .question i{
    transform: rotate(180deg);
 }
+
+/* footer */
+footer{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 2rem;
+   padding: 1rem 10vw;
+}
+footer a img{
+   max-width: 30vw;
+}
+
+footer p{
+   color: var(--light-color1);
+   font-size: clamp(1rem , 5vw , 0.5rem);
+}
+
+@media (max-width:400px ) {
+   footer{
+      flex-direction: column;
+   }
+   footer a img{
+      max-width: 80vw;
+   }
+}
+
+
+
+
+/* MEDIA QUERIES */
+
+
+
+
+
+
+
+@media (max-width:1440px) {
+   #event a.seeMore , .actionBtn{
+      border-radius: 1rem;
+      padding: 0.75rem 3.5rem;
+      font-size: 1.3rem;
+   }  
+}
+
+@media (max-width:1024px) {
+   #secondP section h1.sectionTitle{
+      font-size: 3.5rem;
+   }
+   
+}
+@media (max-width:768px) {
+   #secondP section h1.sectionTitle{
+      font-size: 3rem;
+   }
+   #event a.seeMore , .actionBtn{
+      border-radius: 1rem;
+      padding: 0.6rem 2rem;
+      font-size: 1.2rem;
+   }  
+}
+
+@media (max-width:450px) {
+   #secondP section h1.sectionTitle{
+      font-size: 2.4rem;
+   }
+   #event a.seeMore , .actionBtn{
+      border-radius: 1rem;
+      padding: 0.5rem 1.6rem;
+      font-size: 1.1rem;
+   }  
+}
+
+
+@media (max-width:380px) {
+   #secondP section h1.sectionTitle{
+      font-size: 2rem;
+   }
+   #event a.seeMore , .actionBtn{
+      border-radius: 1rem;
+      padding: 0.5rem 1.6rem;
+      font-size: 1rem;
+   }  
+}
+
+/* first animation */
+
+@media (max-width:1024px) {
+   #present .presentItemContainer .socials{
+      bottom: 80px;
+      left: 80px;
+      font-size: 1.9rem;
+      gap: 1.5rem;
+   }
+
+   #present .presentItemContainer div img {
+      max-width: 80dvw;
+   }
+   #present .presentItemContainer div h1 {
+      font-size: 3.7rem;
+   }
+}
+
+@media (max-width:768px) {
+   #present .presentItemContainer .socials{
+      bottom: 60px;
+      left: 50px;
+      font-size: 1.7rem;
+      gap: 1.5rem;
+   }
+
+   #present .presentItemContainer div img {
+      max-width: 75dvw;
+   }
+   #present .presentItemContainer div h1 {
+      font-size: 3.3rem;
+   }
+}
+
+@media (max-width:550px) {
+   #present .presentItemContainer .socials{
+      bottom: 50px;
+      left: 30px;
+      font-size: 1.5rem;
+      gap: 1.5rem;
+   }
+
+   #present .presentItemContainer div img {
+      max-width: 65dvw;
+   }
+   #present .presentItemContainer div h1 {
+      font-size: 3rem;
+   }
+}
+@media (max-width:440px) {
+   #present .presentItemContainer .socials{
+      bottom: 40px;
+      left: 20px;
+      font-size: 1.2rem;
+      gap: 1.5rem;
+   }
+}
+
+/* navbar */
+
+@media (max-width: 1440px) {
+   .header .left img{
+      height: 80px;
+   }
+}
+
+@media (max-width: 900px) {
+   .header nav.right{
+      font-size: 1rem;
+
+   }
+   .header .left img{
+      height: 60px;
+   }
+}
+
+@media (max-width:768px) {
+    
+   .showOnMobile{
+      display: flex;
+      color: var(--light-color1);
+      font-size: 2rem;
+   }
+   
+   .navCloseBtn.showOnMobile{
+      font-size: 3rem;
+      margin: 2rem;
+   }
+
+    nav.right{
+      font-size: 1.3rem;
+      width: 100%;
+      left: 0;
+      bottom: -100%;
+      padding: 3rem 0;
+      position: fixed;
+      flex-direction: column;
+      align-items: center;
+      background: var(--main-color);
+      transition: 0.5s ease-out;
+   }
+
+   nav.right.active{
+      bottom: 0;
+   }
+
+   .overlay{
+      background: #00000044;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 9;
+      display: none;
+   }
+   .overlay.active{
+      display: block;
+   }
+
+}
+
+/* the event */
+
+@media (max-width:1440px) {
+   #event p{
+      font-size: 2.6rem;
+      padding: 5rem 2rem;
+      line-height: 3.4rem;
+      letter-spacing: 0.5px;
+   }
+   
+                 
+}
+
+@media (max-width:1024px) {
+   #event p{
+      font-size: 2.3rem;
+      padding: 5rem 1rem;
+      line-height: 3.1rem;
+   }
+}
+
+@media (max-width:768px) {
+   #event p{
+      font-size: 2rem;
+      padding: 4rem 0rem;
+      line-height: 2.8rem;
+   }
+}
+
+@media (max-width:550px) {
+   #event p{
+      font-size: 1.75rem;
+      padding: 3rem 0rem;
+      line-height: 2.3rem;
+   }
+}
+
+@media (max-width:450px) {
+   #event p{
+      font-size: 1.5rem;
+      line-height: 1.9rem;
+   }
+}
+
+
+
+/* countdown */
+
+@media (max-width: 768px) {
+  
+   #countdown .container .phases .phase{
+      font-size: 2.5vw;
+   
+   }
+   #countdown .container  .countdownContainer{
+      font-size: 13vw;
+      gap: 1.5rem;
+      margin: 3rem 0 6rem;
+   
+   }
+
+}
+
+@media (max-width:500px) {
+   #countdown .container .countdownTitle{
+      font-size: 6vw;
+   }
+}
+
+@media (max-width:400px) {
+   #countdown .container  .countdownContainer{
+      font-size: 10vw;
+      gap: 1rem;
+      margin: 3rem 0 6rem;
+   
+   }
+}
+
+
+
+
+/* reserve */
+
+
+
+/* 
+.reserve form.input{
+   position: relative;
+   background: var(--dark);
+   padding: 2.5rem 1rem;
+   border-radius: 1.5rem;
+   max-width: 100%;
+}
+*/
+
+@media (max-width:1440px) {
+   .reserve form.input {
+      padding: 2.25rem 1rem;
+   }
+   #register > div {
+      margin: 8rem 0;
+  }
+}
+
+
+@media (max-width:1024px) {
+   .reserve form.input {
+      padding: 2rem 1rem;
+   }
+   #register > div p {
+      font-size: 1.8rem;
+   }
+   #register > div {
+      margin: 7rem 0;
+  }
+}
+@media (max-width:768px) {
+   .reserve form.input {
+      padding: 2rem 0rem;
+   }
+
+   .reserve form.input input {
+      padding: 2rem 1rem;
+      font-size: 1.1rem;
+   }
+
+   #register > div p  {
+      font-size: 1.6rem;
+   }
+   #register > div {
+      margin: 6rem 0;
+  }
+}
+
+@media (max-width:450px) {
+   .reserve form.input {
+      padding: 1.8rem 0rem;
+   }
+   .reserve form.input input {
+      font-size: 1rem;
+   }
+   #register > div p {
+      font-size: 1.4rem;
+   }
+   #register > div {
+      margin: 4rem 0;
+  }
+}
+
+@media (max-width:380px) {
+   .reserve form.input {
+      padding: 1.75rem 0rem;
+   }
+   .reserve form.input input {
+      font-size: 0.8rem;
+   }
+   #register > div {
+      margin: 3rem 0;
+  }
+}
+
+
+
+/* faq */
+/* #faq .container{
+   width: 70%;
+   display: flex;
+   flex-direction: column;
+   margin: 6rem auto 3rem;
+   font-size: 1.5rem;
+   color: var(--main-color);
+} */
+
+@media (max-width:1024px) {
+   #faq .container{
+      width: 80%;
+   }
+   
+}
+
+@media (max-width:768px) {
+   #faq .container{
+      width: 90%;
+      font-size: 1.3rem;
+   }
+   #faq .container .question {
+      padding: 1.7rem 2.5rem;
+  }
+}
+
+@media (max-width:550px) {
+   #faq .container{
+      width: 100%;
+      font-size: 1.1rem;
+   }
+   #faq .container .question {
+      padding: 1.5rem 2.3rem;
+  }
+  #faq .container .answer p{
+   padding: 1.7rem 2.5rem;
+}
+}
+
+@media (max-width:450px) {
+   #faq .container .answer p{
+      padding: 1.5rem 2rem;
+   }
+   
+}
+
+@media (max-width:350px) {
+   #faq .container .answer p{
+      padding: 1.5rem 1.5rem;
+   }
+   
+}
+
+
+/* footer */
+

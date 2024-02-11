@@ -7,12 +7,29 @@ const expoventure = document.querySelector('.expoventure')
 
 const screenHeight = screen.height
 
+const socials = [...document.querySelectorAll('#present .presentItemContainer .socials a')]
+
+for (let i = 0; i < socials.length; i++) {
+   socials[i].style.transition = `opacity 0.3s ${(i+1)*0.1}s , scale 0.3s ${(i+1)*0.1}s , color 0.3s`
+
+   
+}
+
+
+
 addEventListener('scroll', ()=>{
    // console.log(window.scrollY , screenHeight);
 
 
    let Y = window.scrollY;
    
+   if (Y>=0) {
+      socials.forEach(s=>{
+         s.style.opacity = 1
+         s.style.scale = 1
+
+      })
+   }
 
    if (Y >= 0 && Y <=screenHeight* 0.7 ) {
       viclogo.style.opacity = 1;
@@ -66,6 +83,9 @@ const registerSection = document.querySelector('#register')
 const faqSection = document.querySelector('#faq')
 const screenH = screen.height;
 
+const navbar = document.querySelector('nav.right')
+
+
 addEventListener('scroll', () => {
    let Y = scrollY;
    // console.log(Y);
@@ -106,6 +126,16 @@ addEventListener('scroll', () => {
 
 
 
+   navLinks.forEach(n=>{
+      n.addEventListener('click', () => {
+         navToggle()
+      })
+   })
+      // mobile navbar 
+      function navToggle() {
+         navbar.classList.toggle('active')
+         
+      }
 
 
 
