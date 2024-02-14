@@ -11,7 +11,13 @@
 
    <script src="./app.js" defer></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.10.1/lottie.min.js" integrity="sha512-H6aKTjvYAazW0iNuGj1f2dZvSWlt1HGZGEDsXRPETo2IB4H6v36Vl2qiZNlCRxOp0kT7iBf+7USNPavNscZGAw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+   <script
+   src="https://code.jquery.com/jquery-3.7.1.js"
+   integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+   crossorigin="anonymous"></script>
+   <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+   </script>
 </head>
 <body>
    
@@ -26,9 +32,9 @@
 
          <div class="socials">
             <a href="https://www.instagram.com/vic.enp/" class="insta"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.instagram.com/vic.enp/" class="insta"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/vic.enp/" class="insta"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="https://www.instagram.com/vic.enp/" class="insta"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.facebook.com/vic.enpa" target="_blank" class="insta"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://twitter.com/vic_enp" class="insta"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/vic-enp/" class="insta"><i class="fa-brands fa-linkedin-in"></i></a>
          </div>
       </div>
    </section>
@@ -55,9 +61,9 @@
             The event:
          </h1>
 
-         <p> <i class="fa-solid fa-quote-left"></i>  <span>Expoventure</span> is where the <span>Vision & Innovation Club</span> gives younger engineers the opportunity to show, promote and finance their projects by connecting them with interested investors and companies' representatives  <i class="fa-solid fa-quote-right"></i></p>
+         <p> <i class="fa-solid fa-quote-left"></i>  <span>Expoventure</span> is an engineering exposition where participants get a life-changing opportunity to impress industry leaders, investors and companies that are actively seeking for fresh ideas and talents to partner with them and bring their fision to life.<i class="fa-solid fa-quote-right"></i></p>
 
-         <a href="#" class="seeMore">See more</a>
+         <a href="https://www.instagram.com/vic.enp" target="_blank" class="seeMore">See more</a>
       </section>
 <div class="sectiondevider">
    <div style="overflow: hidden;">
@@ -139,7 +145,7 @@
 
             <p>Please Enter your email so we can notify you when Registrations start</p>
 
-            <form action="" class="input">
+            <form action="https://formsubmit.co/walidmh.183@gmail.com" class="input" method="POST" id="resevetionForm">
                <input type="email" name="email" id="reserveEmailInp" placeholder="name@email.com" required>
                <button type="submit" class="actionBtn">Reserve</button>
             </form>
@@ -207,22 +213,22 @@
          <div class="container">
             <div class="faq q1 active">
                <div class="question" onclick="togglefaq(this.parentElement)">
-                  <p class="">What is expoventure</p>
+                  <p class="">What is expoventure?</p>
                   <i class="fa-solid fa-chevron-down"></i>
                </div>
                <div class="answer">
-                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus quis unde dignissimos beatae dolorem itaque ut fugiat eius harum optio. Iure accusamus perspiciatis ab doloremque, eveniet omnis iusto eligendi laudantium.</p>
+                  <p>Expoventure is where the Vision & Innovation Club gives younger engineers the opportunity to show, promote and finance their projects by connecting them with interested investors and companies' representatives. </p>
                </div>
             </div>
 
 
             <div class="faq q1 ">
                <div class="question" onclick="togglefaq(this.parentElement)">
-                  <p class="">What is expoventure</p>
+                  <p class="">How does the selection process work?</p>
                   <i class="fa-solid fa-chevron-down"></i>
                </div>
                <div class="answer">
-                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus quis unde dignissimos beatae dolorem itaque ut fugiat eius harum optio. Iure accusamus perspiciatis ab doloremque, eveniet omnis iusto eligendi laudantium.</p>
+                  <p>Out team will be looking for 20 of the most innovative projects based on originality and project's market value, so you will bw asked in the form to describe it in details.</p>
                </div>
             </div>
 
@@ -230,22 +236,22 @@
 
             <div class="faq q1 ">
                <div class="question" onclick="togglefaq(this.parentElement)">
-                  <p class="">What is expoventure</p>
+                  <p class="">What about the big day?</p>
                   <i class="fa-solid fa-chevron-down"></i>
                </div>
                <div class="answer">
-                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus quis unde dignissimos beatae dolorem itaque ut fugiat eius harum optio. Iure accusamus perspiciatis ab doloremque, eveniet omnis iusto eligendi laudantium.</p>
+                  <p>Each project will have 15 minutes to be presented, followed by talking session with investors.</p>
                </div>
             </div>
 
 
             <div class="faq q1 ">
                <div class="question" onclick="togglefaq(this.parentElement)">
-                  <p class="">What is expoventure</p>
+                  <p class="">How can I join?</p>
                   <i class="fa-solid fa-chevron-down"></i>
                </div>
                <div class="answer">
-                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus quis unde dignissimos beatae dolorem itaque ut fugiat eius harum optio. Iure accusamus perspiciatis ab doloremque, eveniet omnis iusto eligendi laudantium.</p>
+                  <p>Just keep an eye on the form that will be shared when <a href="#countdown">countdown</a> ends.</p>
                </div>
             </div>
          </div>

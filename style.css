@@ -147,7 +147,7 @@ body{
 }
 
 #present .expoventure img:nth-child(2){
-   opacity: 0.35;
+   opacity: 0.2;
 }
 /* ---  SECOND PART  --- */
 .sectiondevider{
@@ -219,7 +219,7 @@ body{
 
 .header .left img:nth-child(2){
    position: absolute;
-   opacity: 0.35;
+   opacity: 0.2;
    left: 0;
 }
  /* nav.showOnMobile{
@@ -277,7 +277,7 @@ body{
 
 #event p{
    color: var(--light-color1);
-   font-size: 3rem;
+   font-size: 2.7rem;
    padding: 5rem 3rem;
    line-height: 4rem;
    letter-spacing: 1px;
@@ -338,7 +338,7 @@ body{
    font-size: 1.3rem;
    padding: 0.5rem;
    color: var(--light-color1);
-
+   white-space: nowrap;
 }
 
 #countdown .container .phases .phase.passed{
@@ -429,7 +429,7 @@ body{
 } */
 
 #register > div {
-   margin: 10rem 0;
+   margin: 0 0 10rem ;
 }
 
 #register > div .sectionTitle{
@@ -546,6 +546,11 @@ body{
    transform: rotate(180deg);
 }
 
+
+#faq  .answer a{
+   color: var(--secondary-color);
+   text-decoration: underline;
+}
 /* footer */
 footer{
    display: flex;
@@ -563,7 +568,7 @@ footer a img{
 }
 footer a img:nth-child(1){
    position: absolute;
-   opacity: 0.35;
+   opacity: 0.2;
 }
 
 
@@ -815,7 +820,7 @@ footer p{
   
    #countdown .container .phases .phase{
       font-size: 2.5vw;
-   
+      padding: 0.3rem;
    }
    #countdown .container  .countdownContainer{
       font-size: 13vw;

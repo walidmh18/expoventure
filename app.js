@@ -87,6 +87,10 @@ const navbar = document.querySelector('nav.right')
 const overlay = document.querySelector('.overlay')
 
 
+overlay.onclick = () => {
+   navToggle()
+}
+
 addEventListener('scroll', () => {
    let Y = scrollY;
    // console.log(Y);
@@ -226,10 +230,20 @@ setInterval(() => {
 
 let currT = Date.now()
 
-  
+const reserve = document.querySelector('#register .reserve')
+const register = document.querySelector('#register .register')
+const spectate = document.querySelector('#register .spectate')
+const highlights = document.querySelector('#register .highlights')
+
+console.log(reserve);
+
 if (currT <= regStartDate) {
    // announcement
    
+   reserve.style.display = 'block'
+   register.style.display = 'none'
+   spectate.style.display = 'none'
+   highlights.style.display = 'none'
 
    phases[0].classList.add('current')
    phases[1].classList.add('coming')
@@ -246,7 +260,12 @@ if (currT <= regStartDate) {
 } else if(currT > regStartDate && currT <= regEndDate){
    // registration
    
-   
+   reserve.style.display = 'none'
+   register.style.display = 'block'
+   spectate.style.display = 'none'
+   highlights.style.display = 'none'
+
+
    phases[0].classList.add('passed')
    phases[1].classList.add('current')
    phases[2].classList.add('coming')
@@ -261,7 +280,11 @@ if (currT <= regStartDate) {
 } else if (currT > regEndDate && currT <= eventDay) {
    // dday countdown
    
-
+   
+   reserve.style.display = 'none'
+   register.style.display = 'none'
+   spectate.style.display = 'block'
+   highlights.style.display = 'none'
 
    phases[0].classList.add('passed')
    phases[1].classList.add('passed')
@@ -278,6 +301,12 @@ if (currT <= regStartDate) {
 } else if(currT > eventDay){
    // event ended
    
+
+   
+   reserve.style.display = 'none'
+   register.style.display = 'none'
+   spectate.style.display = 'none'
+   highlights.style.display = 'block'
    
    phases[0].classList.add('passed')
    phases[1].classList.add('passed')
@@ -323,3 +352,39 @@ function togglefaq(e) {
       
    }
 }
+
+
+
+
+// submit register form
+
+
+
+
+
+
+$('#resevetionForm').on('submit', function(event) {
+   event.preventDefault(); // prevent reload
+   let email = $('#reserveEmailInp').val();
+   let formData = {
+      service_id:'service_7jtvn08',
+      template_id:'template_hoo71oa',
+      user_id: 'ssofRhjWn8Ltv60ZG',
+      template_params : {
+         'message': email,
+         
+     }
+   }
+
+
+   $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+       type: 'POST',
+       data: JSON.stringify(formData),
+       contentType: 'application/json', // auto-detection
+       
+   }).done(function() {
+       alert('Reservation recorded!, We will send you the registration form once registration begins');
+   }).fail(function(error) {
+       alert('Oops... ' + JSON.stringify(error));
+   });
+});
